@@ -9,6 +9,19 @@
         
     }
 
+    &_odvu {
+        @include responsive(desktop) {
+            padding-top: 65px;
+        }
+    }
+
+    // Step 2 styles
+    &_step-2 {
+        @include responsive(mobile) {
+            padding-top: 34px;
+        }
+    }
+
     &__logo-wrapper {
         width: 100%;
         display: flex;

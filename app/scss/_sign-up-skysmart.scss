@@ -16,6 +16,19 @@
         padding: 0;
         background-color: $yellow;
 
+        &_odvu {
+
+            @include responsive(desktop) {
+                padding-right: 23px;
+            }
+
+            .form {
+                @include responsive(mobile) {
+                    margin-top: 68px;
+                }
+            }
+        }
+
         &__title {
 
             @include responsive(desktop) {

@@ -70,4 +70,31 @@
         position: absolute;
         left: 485px;
     }
+
+    // Final OdVU styles
+    &_odvu {
+
+        @include responsive(desktop) {
+            min-height: 472px;
+        }
+        
+        .form-section__title {
+            img {
+                width: 150px;
+                left: 140px;
+                transform: rotate(-5.3deg);
+                
+                @include responsive(desktop) {
+                    width: 262px;
+                    left: 130px;
+                    transform: rotate(-8.88deg);
+                }
+            }
+        }
+
+        .emoji.emoji-peace {
+            top: 41px;
+            left: 469px;
+        }
+    }
 }

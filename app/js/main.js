@@ -14,13 +14,19 @@ window.addEventListener('DOMContentLoaded', function() {
             const formTitle = this.querySelector('.form__title');
 
             if(target.classList.contains('next-form')) {
-                formTitle.innerText = 'Шаг 2 из 2';
+                if(formTitle) {
+                    formTitle.innerText = 'Шаг 2 из 2';
+                }
+
                 stepOne.classList.add('hide');
                 stepTwo.classList.remove('hide');
             }
 
             if(target.classList.contains('prew-form')) {
-                formTitle.innerText = 'Шаг 1 из 2';
+                if(formTitle) {
+                    formTitle.innerText = 'Шаг 1 из 2';
+                }
+                
                 stepOne.classList.remove('hide');
                 stepTwo.classList.add('hide');
             }

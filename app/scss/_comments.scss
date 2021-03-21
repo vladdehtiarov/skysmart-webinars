@@ -7,6 +7,12 @@
         margin-top: 104px;
     }
 
+    &_odvu {
+        @include responsive(desktop) {
+            margin-top: 106px;
+        }
+    }
+
     .container {
         @include responsive(mobile) {
             width: 100%;

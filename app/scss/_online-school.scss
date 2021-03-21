@@ -6,6 +6,29 @@
         margin-top: 66px;
     }
 
+    // Step 2 styles
+    &_step-2 {
+        @include responsive(mobile) {
+            margin-top: 10px;
+        }
+
+        .section-title img {
+            @include responsive(mobile) {
+                top: 27px;
+                right: -2px;
+            }
+        }
+    }
+
+    // OdVU styles
+    &_odvu {
+        margin-top: 21px;
+
+        @include responsive(desktop) {
+            margin-top: 56px;
+        }
+    }
+
     .container {
         width: 100%;
         max-width: 1184px;
