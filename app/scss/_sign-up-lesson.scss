@@ -1,0 +1,8 @@
+// sign-up-lesson styles
+.sign-up-lesson {
+    margin-top: 4px;
+
+    @include responsive(desktop) {
+        margin-top: 72px;
+    }
+}

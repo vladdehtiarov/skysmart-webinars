@@ -1,0 +1,21 @@
+// skysmart-page styles
+.skysmart-page {
+    position: relative;
+
+    .bg-line {
+        width: 100%;
+        height: 1325px;
+        background-image: url(../images/svg/vector.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 897px;
+        left: 0;
+        z-index: 1000;
+
+        @include responsive(mobile) {
+            display: none;
+        }
+    }
+}

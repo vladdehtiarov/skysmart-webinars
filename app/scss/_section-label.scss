@@ -1,0 +1,71 @@
+// section-label styles
+.section-label {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    margin-left: auto;
+
+    @include responsive(1160px) {
+        width: auto;
+        margin-left: 3%;
+    }
+
+    @include responsive(mobile) {
+        margin-left: auto;
+    }
+}
+
+.section-title {
+    width: 310px;
+    margin-left: 10px;
+    padding-top: 35px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -0.1px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    position: relative;
+
+    @include responsive(320px) {
+        overflow: hidden;  
+    }
+    
+    @include responsive(desktop) {
+        width: 912px;
+        padding-top: 0;
+        margin-left: 0;
+        font-size: 64px;
+        overflow: visible;
+    }
+
+    img {
+        width: 105px;
+        transform: rotate(6.58deg);
+        position: absolute;
+        top: 12px;
+        right: -8px;
+
+        @include responsive(desktop) {
+            top: 52px;
+            right: 5px;
+            width: 199px;
+        }
+    }
+}
+
+.section-subtitle {
+    display: none;
+    z-index: 950;
+
+    @include responsive(desktop) {
+        display: block;
+        width: 855px;
+        margin-top: 24px;
+        font-weight: 0;
+        font-size: 40px;
+        line-height: 100%;
+        letter-spacing: -0.1px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: $gray;
+    }
+}

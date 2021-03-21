@@ -1,0 +1,238 @@
+// form styles
+.form {
+    width: 100%;
+
+    @include responsive(desktop) {
+        width: 380px;
+        margin-top: 5px;
+    }
+
+    @include responsive(1150px) {
+        width: 100%;
+        margin-top: 55px;
+    }
+
+    @include responsive(mobile) {
+        margin-top: 10px;
+    }
+
+    &__inputs {
+        margin-top: 22px;
+    }
+
+    &__title {
+        display: none;
+
+        @include responsive(desktop) {
+            display: block;
+        }
+    }
+    
+    &-select select,
+    &-input {
+        width: 100%;
+        height: 60px;
+        border-radius: 10px;
+        appearance: none;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        background-image: none;
+        background: #fff;
+        padding: 0 20px;
+        font-family: $basic-fonts;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.05px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: $base-text;
+
+        @include responsive(desktop) {
+            width: 380px;
+        }
+
+        @include responsive(1150px) {
+            width: 100%;
+        }
+    }
+
+    &-input::placeholder {
+        font-family: $basic-fonts;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.05px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: $gray;
+    }
+
+    select {
+        cursor:pointer;
+
+        option {
+            cursor: pointer;
+        }
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    &-select {
+        margin-top: 12px;
+        position: relative;
+
+        @include responsive(desktop) {
+            margin-top: 16px;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 16px;
+            height: 9px;
+            background-image: url(../images/control/arrov.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 55%;
+            right: 24px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            pointer-events: none;
+            z-index: 1;
+
+            @include responsive(desktop) {
+                top: 50%;
+                right: 18px;
+            }
+        }
+    }
+
+    .send-form {
+        width: 100%;
+        height: 60px;
+        margin-top: 16px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background-color: $blue;
+        font-family: $basic-fonts;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.05px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #fff;
+        cursor: pointer;
+
+        @include responsive(desktop) {
+            width: 380px;
+            margin-top: 24px;
+        }
+
+        @include responsive(1150px) {
+            width: 100%;
+        }
+    }
+
+    &__inputs_step-2 {
+
+        .form-input {
+            
+            &:first-child {
+                margin-top: 0;
+            }
+
+            margin-top: 12px;
+
+            @include responsive(desktop) {
+                margin-top: 16px;
+            }
+        }
+
+        .send-form {
+            width: 180px;
+
+            @include responsive(desktop) {
+                width: 216px;
+            }
+        }
+
+        .prew-form {
+            width: 112px;
+            height: 60px;
+            margin-right: 4px;
+            border-radius: 10px;
+            border: 1px solid rgba(37, 41, 46, 0.2);
+            background-color: transparent;
+            font-family: $basic-fonts;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+            letter-spacing: -0.05px;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: $base-text;
+            cursor: pointer;
+
+            @include responsive(desktop) {
+                width: 148px;
+                margin-right: 11px;
+            }
+        }
+
+        .form-licens {
+            width: 180px;
+            margin-top: 6px;
+            margin-left: 120px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            letter-spacing: 0.2px;
+            color: $gray;
+
+            @include responsive(desktop) {
+                width: 217px;
+                margin-top: 8px;
+                margin-left: 164px;
+                font-size: 17px;
+                line-height: 20px;
+            }
+
+            a {
+                font-family: $basic-fonts;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 14px;
+                letter-spacing: 0.2px;
+                color: $gray;
+                border-bottom: 1px solid $gray;
+
+                @include responsive(desktop) {
+                    font-size: 17px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.blank-field {
+    border: 2px solid #f70110;
+    color: #f70110;
+
+    &::placeholder {
+        color: #f70110;
+    }
+
+    option:first-child {
+        color: #f70110;
+    }
+}

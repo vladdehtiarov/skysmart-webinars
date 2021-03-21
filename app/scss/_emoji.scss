@@ -1,0 +1,50 @@
+.emoji {
+    display: inline-block;
+
+    // clock
+    &.emoji-clock {
+        @include uploadRespEmoji(clock);
+    }
+
+    // peace
+    &.emoji-peace {
+        @include uploadRespEmoji(peace);
+    }
+
+    // rocket
+    &.emoji-rocket {
+        @include uploadRespEmoji(rocket);
+    }
+
+    // diagram
+    &.emoji-diagram {
+        @include uploadRespEmoji(diagram);
+    }
+
+    // globe
+    &.emoji-globe {
+        @include uploadRespEmoji(globe);
+    }
+
+    // spoke
+    &.emoji-spoke {
+        @include uploadRespEmoji(spoke);
+    }
+    
+}
+
+.emoji--only-desktop {
+    display: none;
+
+    @include responsive(desktop) {
+        display: inline-block;
+    }
+}
+
+.emoji--only-mobile {
+    display: none;
+
+    @include responsive(mobile) {
+        display: inline-block;
+    }
+}

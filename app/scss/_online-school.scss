@@ -1,0 +1,189 @@
+// online-school styles
+.online-school {
+    margin-top: 45px;
+
+    @include responsive(desktop) {
+        margin-top: 66px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1184px;
+        overflow: hidden;
+
+        @include responsive(desktop) {
+            overflow: visible;
+        }
+    }
+
+    &__info {
+        width: 100%;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        @include responsive(desktop) {
+            margin-top: 36px;
+            padding-bottom: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        @include responsive(1175px) {
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-item {
+            width: 300px;
+            height: 276px;
+            margin-top: 16px;
+            padding: 14px 14px 0 12px;
+            border-radius: 22px;
+            border: 8px solid #FFFFFF;
+            background-color: $yellow;
+            position: relative;
+            z-index: 1100;
+            
+            @include responsive(desktop) {
+                width: 584px;
+                height: 424px;
+                padding: 24px 19px 0 28px;
+                border: 12px solid #FFFFFF;
+            }
+
+            img {
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .emoji {
+                position: absolute;
+            }
+
+            &:first-child {
+
+                .emoji.emoji-rocket {
+                    top: -28px;
+                    right: -4px;
+
+                    @include responsive(desktop) {
+                        width: 174px;
+                        height: 174px;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                background-color: $orange;
+
+                .emoji.emoji-diagram {
+                    top: 32px;
+                    right: -1px;
+                    transform: rotate(10.54deg);
+
+                    @include responsive(desktop) {
+                        width: 152px;
+                        height: 152px;
+                        top: auto;
+                        right: 0;
+                        bottom: 8px;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                overflow: hidden;
+                margin-top: 8px;
+                z-index: 950;
+
+                @include responsive(desktop) {
+                    margin-top: 16px;
+                }
+            }
+
+            &:last-child {
+                margin-top: -8px;
+                transform: rotate(10deg);
+
+                @include responsive(desktop) {
+                    margin-top: -14px;
+                    margin-right: -28px;
+                    transform: rotate(5deg);
+                }
+                
+                .emoji.emoji-globe {
+                    top: 7px;
+                    right: 20px;
+                    transform: rotate(-22deg);
+
+                    @include responsive(desktop) {
+                        width: 178px;
+                        height: 178px;
+                        top: auto;
+                        right: auto;
+                        left: 49%;
+                        bottom: -73px;
+                        transform: translateX(-50%) rotate(-15deg);
+                    }
+                }
+            }
+        }
+
+        &-title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: -0.1px;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: $base-text;
+
+            @include responsive(desktop) {
+                font-size: 40px;
+            }
+        }
+
+        &-text {
+            margin-top: 8px;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: -0.1px;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: $gray;
+
+            @include responsive(desktop) {
+                margin-top: 16px;
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+.mobile-br {
+    display: inline;
+
+    @include responsive(desktop){
+        display: none;
+    }
+}
+
+.desktop-br {
+    display: none;
+
+    @include responsive(desktop){
+        display: inline;
+    }
+}

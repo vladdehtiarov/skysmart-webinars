@@ -1,0 +1,73 @@
+// form-section styles
+.form-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include responsive(desktop) {
+        height: 100%;
+        min-height: 464px;
+        padding: 24px 24px 28px 24px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: $orange;
+        border-radius: 16px;
+    }
+
+    @include responsive(1150px) {
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include responsive(mobile) {
+        align-items: flex-start;
+    }
+
+    &__title {
+        width: 298px;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: -0.1px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        position: relative;
+
+        @include responsive(desktop) {
+            width: 655px;
+            font-size: 64px;  
+        }
+
+        img {
+            width: 185px;
+            transform: rotate(-5.8deg);
+            position: absolute;
+            left: 37px;
+            bottom: -10px;
+
+            @include responsive(desktop) {
+                width: 350px;
+                left: 91px;
+                bottom: -12px;
+                width: 350px;
+            }
+        }
+
+        .word {
+            position: absolute;
+            left: 225px;
+
+            @include responsive(desktop) {
+                left: 453px;
+            }
+        }
+    }
+
+    .emoji.emoji-peace {
+        width: 152px;
+        height: 152px;
+        transform: rotate(10.94deg);
+        position: absolute;
+        left: 485px;
+    }
+}

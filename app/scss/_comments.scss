@@ -1,0 +1,144 @@
+// comments styles
+.comments {
+    width: 100%;
+    margin-top: 19px;
+
+    @include responsive(desktop) {
+        margin-top: 104px;
+    }
+
+    .container {
+        @include responsive(mobile) {
+            width: 100%;
+        }
+    }
+
+    .section-title {
+        padding-top: 0;
+    }
+
+    .desktop-br {
+        display: inline;
+
+        @include responsive(desktop) {
+            display: none;
+        }
+    }
+
+    &__inner {
+        width: 100%;
+        margin-top: 24px;
+        overflow: hidden;
+        overflow-x: scroll;
+
+        @include responsive(desktop) {
+            overflow: visible;
+        }
+    }
+
+    &__wrapp {
+        width: 960px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @include responsive(desktop) {
+            width: 100%;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+    }
+
+    &__item {
+        width: 300px;
+        height: 472px;
+        padding: 20px;
+        margin: 0 10px;
+        padding-bottom: 32px;
+        border-radius: 16px;
+        background-color: #fff;
+        z-index: 1100;
+        
+        @include responsive(desktop) {
+            width: 360px;
+            height: 100%;
+            margin: 0;
+            min-height: 410px;
+            padding: 24px;
+            padding-bottom: 38px; 
+        }
+    }
+
+    &__title {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        &-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &-vk {
+            display: none;
+
+            @include responsive(desktop) {
+                display: block;
+                margin-top: 5px;
+                margin-right: 0;
+                margin-left: auto;
+            }
+        }
+
+        &-info {
+            margin-left: 16px;
+        }
+
+        &-name {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 23px;
+            color: #365799;
+        }
+
+        &-location {
+            margin-top: 3px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: $gray;
+        }
+    }
+
+    &__text {
+        height: 360px;
+        margin-top: 12px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        @include responsive(desktop) {
+            height: auto;
+            overflow: visible;
+        }
+    }
+}
