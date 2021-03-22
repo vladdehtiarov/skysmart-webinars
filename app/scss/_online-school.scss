@@ -29,6 +29,39 @@
         }
     }
 
+    &_en-wu {
+        margin-top: 12px;
+
+        @include responsive(desktop) {
+            margin-top: 57px;
+        }
+    }
+
+    &_math-wu {
+        margin-top: 37px;
+
+        @include responsive(desktop) {
+            margin-top: 57px;
+        }
+    }
+
+    &_math-odwu {
+        margin-top: 3px;
+
+        @include responsive(desktop) {
+            margin-top: 57px;
+        }
+    }
+
+    &_en-odwu {
+        margin-top: 3px;
+
+        @include responsive(desktop) {
+            margin-top: 57px;
+        }
+    }
+
+
     .container {
         width: 100%;
         max-width: 1184px;

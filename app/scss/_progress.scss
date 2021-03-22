@@ -1,0 +1,53 @@
+// progress styles
+.progress {
+    width: 100%;
+    margin-top: 44px;
+
+    @include responsive(desktop) {
+        margin-top: 108px;
+    }
+
+    &__inner {
+        width: 100%;
+        padding: 16px 22px 24px 11px;
+        border-radius: 16px;
+        background-color: $pink;
+        position: relative;
+        z-index: 1100;
+
+        @include responsive(desktop) {
+            padding: 25px 0 40px 24px;
+        }
+
+        img {
+            width: 172px;
+            position: absolute;
+            right: 0;
+            bottom: -66px;
+            transform: rotate(8.75deg);
+
+            @include responsive(desktop) {
+                width: 257px;
+                right: 51px;
+                bottom: -81px;
+            }
+        }
+
+        .section-title {
+            width: 100%;
+            padding-top: 0;
+
+            span {
+                display: block;
+            }
+
+            @include responsive(desktop) {
+                max-width: 1070px;
+
+                span {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

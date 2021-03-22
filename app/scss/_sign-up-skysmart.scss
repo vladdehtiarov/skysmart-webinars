@@ -12,6 +12,14 @@
         }
     }
 
+    &_en-wu {
+        .form {
+            @include responsive(mobile) {
+                margin-top: 66px;
+            }
+        }
+    }
+
     .form-section {
         padding: 0;
         background-color: $yellow;
@@ -48,6 +56,19 @@
                 }
             }
         }        
+    }
+
+    &_math-wu {
+        .form-section__title {
+            img {
+
+                @include responsive(desktop) {
+                    width: 260px;
+                    top: -7px;
+                    left: 334px;
+                }
+            }
+        }
     }
 
     .form__inputs {

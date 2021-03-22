@@ -7,9 +7,28 @@
         margin-top: 104px;
     }
 
+    // OdVu styles
     &_odvu {
         @include responsive(desktop) {
             margin-top: 106px;
+        }
+    }
+
+    // English WU
+    &_en-wu {
+        margin-top: 131px;
+
+        @include responsive(desktop) {
+            margin-top: 209px;
+        }
+    }
+
+    // Math WU
+    &_math-wu {
+        margin-top: 38px;
+
+        @include responsive(desktop) {
+            margin-top: 59px;
         }
     }
 

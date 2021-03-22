@@ -1,0 +1,189 @@
+// training-math styles
+.training-math {
+    width: 100%;
+    margin-top: 36px;
+
+    @include responsive(desktop) {
+        margin-top: 120px;
+    }
+
+    .container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+
+    &__steps {
+        margin-top: 16px;
+        padding-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include responsive(desktop) {
+            margin-top: 64px;
+            padding-bottom: 290px;
+            flex-direction: row;
+            // flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+
+    &__step {
+        width: 300px;
+        height: auto;
+        border-radius: 16px;
+        position: relative;
+
+        @include responsive(desktop) {
+            width: 560px;
+        }
+
+        picture img {
+            position: absolute;
+        }
+
+        &:first-child {
+            background-color: $orange;
+            padding: 72px 27px 32px 20px;
+
+            @include responsive(desktop) {
+                padding: 112px 26px 56px 24px;
+            }
+
+            picture img {
+                width: 250px;
+                top: -42px;
+                left: 16px;
+                
+                @include responsive(desktop) {
+                    width: 370px;
+                    top: -64px;
+                    left: 44px;
+                }
+            }
+
+            .training-math__step-img {
+                bottom: -271px;
+                left: 59px;
+                transform: rotate(4.68deg);
+            }
+        }
+
+        &:last-child {
+            width: 300px;
+            margin-top: 69px;
+            margin-right: 20px;
+            padding: 16px 19px 32px 12px;
+            border-radius: 24px;
+            border: 8px solid #fff;
+            transform: rotate(5deg);
+            background-color: $yellow;
+            
+            @include responsive(desktop) {
+                width: 587px;
+                margin-right: 21px;
+                margin-top: -21px;
+                padding: 112px 38px 58px 25px;
+                border-radius: 26px;
+                border: 12px solid #fff;
+            }
+
+            .mobile-br {
+                display: inline;
+
+                @include responsive(desktop) {
+                    display: none;
+                }
+            }
+
+            picture img {
+                top: -92px;
+                left: 19px;
+                width: 233px;
+                transform: rotate(-5deg);
+
+                @include responsive(desktop) {
+                    width: 356px;
+                    top: -66px;
+                    left: 39px;
+                }
+            }
+
+            .training-math__step-img {
+                left: 98px;
+                bottom: -246px;
+                transform: rotate(-5deg);
+            }
+        }
+
+
+        &-title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: -0.1px;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+
+            @include responsive(desktop) {
+                font-size: 40px;
+            }
+        }
+
+        &-text {
+            margin-top: 16px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: -0.1px;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: $gray;
+
+            @include responsive(desktop) {
+                margin-top: 14px;
+                font-size: 40px;
+                line-height: 100%;
+                letter-spacing: -0.1px;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+            }
+        }
+
+        &-img {
+            display: none;
+            position: absolute;
+
+            @include responsive(desktop) {
+                display: block;
+                width: 425px;
+                height: 274px;
+            }
+
+            &-wrapp {
+                position: relative;
+                width: inherit;
+                height: inherit;
+                border-radius: 26px;
+                overflow: hidden;
+                border: 8px solid #fff;
+                
+                @include responsive(desktop) {
+                    border: 12px solid #fff;
+                }
+
+                img {
+                    width: inherit;
+                    height: inherit;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+
+
+}

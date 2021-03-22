@@ -15,10 +15,32 @@
         }
     }
 
+    &_en-odwu {
+        @include responsive(mobile) {
+            padding-top: 34px;
+        }
+    }
+
     // Step 2 styles
     &_step-2 {
         @include responsive(mobile) {
             padding-top: 34px;
+        }
+    }
+
+    &_math-wu {
+        padding-top: 23px;
+
+        @include responsive(mobile) {
+            padding-top: 71px;
+        }
+    }
+
+    &_math-odwu {
+        padding-top: 23px;
+
+        @include responsive(mobile) {
+            padding-top: 38px;
         }
     }
 

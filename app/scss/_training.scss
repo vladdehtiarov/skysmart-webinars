@@ -1,0 +1,209 @@
+// training styles
+.training {
+    width: 100%;
+    margin-top: 36px;
+
+    @include responsive(desktop) {
+        margin-top: 120px;
+    }
+
+    .section-title {
+        margin-left: 0;
+    }
+
+    &__steps {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include responsive(desktop) {
+            margin-top: 72px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+    }
+
+    &__steps .training__step {
+        width: 300px;
+        height: auto;
+        padding: 16px 27px 0 20px;
+        border-radius: 16px;
+        background-color: $orange;
+        position: relative;
+
+        @include responsive(desktop) {
+            width: 360px;
+            padding: 24px;
+        }
+
+        &:first-child {
+            padding-bottom: 92px;
+
+            @include responsive(desktop) {
+                padding-bottom: 112px;
+            }
+
+            .training__step-img {
+                transform: rotate(3deg);
+                bottom: -91px;
+                left: 15px;
+
+                @include responsive(desktop) {
+                    bottom: -125px;
+                    left: auto;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            margin-top: 113px;
+            padding-bottom: 74px;
+
+            @include responsive(desktop) {
+                margin-top: 0;
+                padding-top: 200px;
+                padding-bottom: 40px;
+            }
+
+            .training__step-img {
+                transform: rotate(-4.79deg);
+                left: 41px;
+                bottom: -108px;
+
+                @include responsive(desktop) {
+                    transform: rotate(3deg);
+                    top: -30px;
+                    left: 30px;
+                    bottom: auto;
+                }
+            }
+
+            .training__step-title {
+                @include responsive(mobile) {
+                    color: $gray;
+                }
+            }
+
+            .training__step-text {
+                @include responsive(mobile) {
+                    color: $base-text;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-top: 126px;
+            padding-bottom: 92px;
+
+            @include responsive(desktop) {
+                margin-top: 0;
+                padding-bottom: 109px;
+            }
+
+            @include responsive(1148px) {
+                margin-left: auto;
+            }
+
+            @include responsive(mobile) {
+                padding-right: 0;
+                margin-left: 0;
+            }
+
+            .training__step-img {
+                transform: rotate(-7.5deg);
+                left: 33px;
+                bottom: -82px;
+                
+                @include responsive(desktop) {
+                    transform: rotate(-5deg);
+                    left: 22px;
+                    bottom: -133px;
+                }
+            }
+
+            .training__step-text {
+                
+                @include responsive(desktop) {
+
+                }
+            }
+        }
+
+        &-title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: -0.1px;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+
+            @include responsive(desktop) {
+                font-size: 40px;
+            }
+        }
+
+        &-text {
+            margin-top: 16px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: -0.1px;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: $gray;
+
+            @include responsive(desktop) {
+                margin-top: 14px;
+                font-size: 40px;
+                line-height: 100%;
+                letter-spacing: -0.1px;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+            }
+        }
+
+        &-img {
+            position: absolute;
+            width: 248px;
+            height: 164px;
+
+            @include responsive(desktop) {
+                width: 312px;
+                height: 208px;
+            }
+
+            &-wrapp {
+                position: relative;
+                width: inherit;
+                height: inherit;
+                border-radius: 26px;
+                overflow: hidden;
+                border: 8px solid #fff;
+                
+                @include responsive(desktop) {
+                    border: 12px solid #fff;
+                }
+
+                img {
+                    width: inherit;
+                    height: inherit;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+
+    .desktop-br {
+        display: none;
+
+        @include responsive(desktop) {
+            display: inline;
+        }
+    }
+}

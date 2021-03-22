@@ -1,6 +1,7 @@
 // form styles
 .form {
     width: 100%;
+    z-index: 1100;
 
     @include responsive(desktop) {
         width: 380px;
@@ -108,6 +109,10 @@
                 top: 50%;
                 right: 18px;
             }
+        }
+
+        &_en-wu.form-select::before {
+            right: 16px;
         }
     }
 

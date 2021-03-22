@@ -31,7 +31,8 @@
     }
     
     @include responsive(desktop) {
-        width: 912px;
+        width: 100%;
+        max-width: 912px;
         padding-top: 0;
         margin-left: 0;
         font-size: 64px;
@@ -59,9 +60,10 @@
 
     @include responsive(desktop) {
         display: block;
-        width: 855px;
+        width: 100%;
+        max-width: 855px;
         margin-top: 24px;
-        font-weight: 0;
+        font-weight: 400;
         font-size: 40px;
         line-height: 100%;
         letter-spacing: -0.1px;

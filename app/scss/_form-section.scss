@@ -38,6 +38,22 @@
             font-size: 64px;  
         }
 
+        &_d {
+            display: none;
+
+            @include responsive(desktop) {
+                display: inline;
+            }
+        }
+
+        &_m {
+            display: inline;
+
+            @include responsive(desktop) {
+                display: none;
+            }
+        }
+
         img {
             width: 185px;
             transform: rotate(-5.8deg);
@@ -95,6 +111,170 @@
         .emoji.emoji-peace {
             top: 41px;
             left: 469px;
+        }
+    }
+
+    // English WU styles
+    &_en-wu {
+
+        @include responsive(desktop) {
+            min-height: 472px;
+        }
+
+        .form-section__title {
+            img {
+                width: 179px;
+                left: 117px;
+                bottom: -12px;
+                transform: rotate(-5.19deg);
+                
+                @include responsive(desktop) {
+                    width: 326px;
+                    left: 239px;
+                    bottom: -13px;
+                }
+            }
+        }
+
+        .form__title_no-step {
+            display: none;
+
+            @include responsive(desktop) {
+                display: block;
+            }
+        }
+
+        .emoji.emoji-peace {
+            top: 95px;
+            left: 450px;
+
+            @include responsive(mobile) {
+                width: 95px;
+                height: 95px;
+                top: -30px;
+                left: 179px;
+            }
+        }
+    }
+
+    // Math WU
+
+    &_math-wu {
+
+        @include responsive(desktop) {
+            min-height: 472px;
+        }
+
+        .form-section__title {
+
+            .desktop-br {
+                display: none;
+
+                @include responsive(desktop) {
+                    display: inline;
+                }
+            }
+
+            img {
+                width: 179px;
+                left: 117px;
+                bottom: -8px;
+                transform: rotate(-5.19deg);
+                
+                @include responsive(desktop) {
+                    width: 326px;
+                    left: 239px;
+                    bottom: -13px;
+                }
+            }
+        }
+
+        .form__title_no-step {
+            display: none;
+
+            @include responsive(desktop) {
+                display: block;
+            }
+        }
+
+        .emoji.emoji-peace {
+            top: 95px;
+            left: 450px;
+
+            @include responsive(mobile) {
+                width: 95px;
+                height: 95px;
+                top: -90px;
+                left: 219px;
+            }
+        }
+    }
+
+    &_math-odwu {
+
+        @include responsive(desktop) {
+            min-height: 472px;
+        }
+
+        img {
+            width: 153px;
+            left: 69px;
+            bottom: -14px;
+            transform: rotate(-6deg);
+            
+            @include responsive(desktop) {
+                width: 270px;
+                left: 137px;
+                bottom: -16px;
+            }
+        }
+
+        .form__title_no-step {
+            display: none;
+
+            @include responsive(desktop) {
+                display: block;
+            }
+        }
+
+        .emoji.emoji-peace {
+            top: 262px;
+            left: 376px;
+        }
+    }
+
+    // English OdWU
+    &_en-odwu {
+        @include responsive(desktop) {
+            min-height: 472px;
+        }
+
+        .form-section__title {
+            img {
+                width: 153px;
+                left: 70px;
+                bottom: -14px;
+                transform: rotate(-6deg);
+                
+                @include responsive(desktop) {
+                    width: 270px;
+                    left: 138px;
+                    bottom: -14px;
+                }
+            }
+        }
+
+        .form__title_no-step {
+            display: none;
+
+            @include responsive(desktop) {
+                display: block;
+            }
+        }
+
+        .emoji.emoji-peace {
+            top: 95px;
+            left: 450px;
         }
     }
 }
