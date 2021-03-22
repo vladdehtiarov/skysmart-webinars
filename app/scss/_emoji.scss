@@ -6,6 +6,11 @@
         @include uploadRespEmoji(clock);
     }
 
+    // mailbox
+    &.emoji-mailbox {
+        @include uploadRespEmoji(mailbox);
+    }
+
     // peace
     &.emoji-peace {
         @include uploadRespEmoji(peace);
